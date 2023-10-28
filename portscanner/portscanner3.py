@@ -10,8 +10,8 @@ def check_ip(ip):
 
 def scan_port(ipaddress, port):
     try:
-        sock.settimeout(0.5)
         sock = socket.socket()
+        sock.settimeout(0.5)
         sock.connect((ipaddress, port))
         print("[+] Port " + str(port)  + " is Open...")
     except:
